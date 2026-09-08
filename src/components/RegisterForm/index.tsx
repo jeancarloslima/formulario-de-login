@@ -29,29 +29,29 @@ export default function RegisterForm() {
             <h2 className="text-3xl font-semibold">Criar Conta</h2>
             <span>Já tem uma conta? <Link to="/auth/login" className="text-purple-500 underline">Logar</Link></span>
 
-            <form onSubmit={handleSubmit(handleRegisterUser)} className="flex flex-col gap-4 mt-6">
+            <form onSubmit={handleSubmit(handleRegisterUser)} className="flex flex-col gap-4 mt-3">
                 <fieldset className="flex flex-col gap-4">
                     {errors.name ? <span className="text-xs text-center">{errors.name.message}</span> : <span className="h-4"></span>}
 
-                    <input type="text" placeholder="Nome" {...register('name')} className="w-full p-2 bg-zinc-600 rounded-lg" />
+                    <input type="text" placeholder="Nome" {...register('name')} className="w-full p-2 pl-4 bg-zinc-600 rounded-lg" />
                 </fieldset>
 
                 <fieldset className="flex flex-col gap-4">
                     {errors.lastName ? <span className="text-xs text-center">{errors.lastName.message}</span> : <span className="h-4"></span>}
 
-                    <input type="text" placeholder="Sobrenome" {...register('lastName')} className="w-full p-2 bg-zinc-600 rounded-lg" />
+                    <input type="text" placeholder="Sobrenome" {...register('lastName')} className="w-full p-2 pl-4 bg-zinc-600 rounded-lg" />
                 </fieldset>
 
                 <fieldset className="flex flex-col gap-4">
                     {errors.email ? <span className="text-xs text-center">{errors.email.message}</span> : <span className="h-4"></span>}
 
-                    <input type="text" placeholder="Email" {...register('email')} className="w-full p-2 bg-zinc-600 rounded-lg" />
+                    <input type="text" placeholder="Email" {...register('email')} className="w-full p-2 pl-4 bg-zinc-600 rounded-lg" />
                 </fieldset>
 
                 <fieldset className="flex flex-col gap-4 mb-6">
                     {errors.password ? <span className="text-xs text-center">{errors.password.message}</span> : <span className="h-4"></span>}
 
-                    <input type="text" placeholder="Senha" {...register('password')} className="w-full p-2 bg-zinc-600 rounded-lg" />
+                    <input type="text" placeholder="Senha" {...register('password')} className="w-full p-2 pl-4 bg-zinc-600 rounded-lg" />
                 </fieldset>
 
                 <button type="submit" className="w-full py-2 bg-purple-700 rounded-lg hover:bg-purple-500 hover:cursor-pointer duration-200">Criar conta</button>
