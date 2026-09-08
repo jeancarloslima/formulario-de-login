@@ -18,7 +18,7 @@ export default function RegisterForm() {
 
     const handleRegisterUser = (data: UserFormData) => {
         console.log("Dados:", data);
-        navigate("/");
+        navigate("/", { state: data });
     }
 
   return (
