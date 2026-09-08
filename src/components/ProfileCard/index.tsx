@@ -1,4 +1,11 @@
-export default function ProfileCard({ name, lastName, email, password }) {
+interface ProfileCardProps {
+  name: string;
+  lastName: string;
+  email: string;
+  password: string;
+};
+
+export default function ProfileCard({ name, lastName, email, password }: ProfileCardProps) {
   return (
     <div className="w-full max-w-250 flex flex-col gap-4 p-6 bg-zinc-800 rounded-2xl shadow-2xl text-indigo-50">
       <h2 className="text-center text-3xl font-semibold">Perfil</h2>
