@@ -7,7 +7,7 @@ export default function HomePage() {
   const { name, lastName, email, password } = location.state || {};
 
   if (!email) {
-    navigate('/auth/register')
+    navigate('/auth/register');
   }
 
   return (
