@@ -25,7 +25,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="w-full max-w-100 md:max-w-250 md:min-h-140 md:flex p-6 md:p-4 bg-zinc-800 rounded-2xl shadow-2xl">
+    <div className="w-full max-w-120 md:max-w-250 md:min-h-140 md:flex p-6 md:p-4 bg-zinc-800 rounded-2xl shadow-2xl">
       <div className="hidden relative md:w-[50%] md:flex md:flex-col md:items-center md:justify-between">
         <img
           src={imagemFundo}
@@ -40,7 +40,7 @@ export default function LoginForm() {
       </div>
 
       <div className="flex md:w-[50%] md:items-center md:justify-center">
-        <div className="w-full md:max-w-70 flex flex-col gap-4 text-indigo-50">
+        <div className="w-full md:max-w-[70%] flex flex-col gap-4 text-indigo-50">
           <h2 className="text-3xl font-semibold">Entrar</h2>
           <span>
             Nem tem conta ainda?{" "}

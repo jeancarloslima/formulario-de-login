@@ -29,7 +29,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="w-full max-w-100 md:max-w-250 md:min-h-140 md:flex p-6 md:p-4 bg-zinc-800 rounded-2xl shadow-2xl">
+    <div className="w-full max-w-120 md:max-w-250 md:min-h-140 md:flex p-6 md:p-4 bg-zinc-800 rounded-2xl shadow-2xl">
       <div className="hidden relative md:w-[50%] md:flex md:flex-col md:items-center md:justify-between">
         <img
           src={imagemFundo}
@@ -44,7 +44,7 @@ export default function RegisterForm() {
       </div>
 
       <div className="flex md:w-[50%] md:items-center md:justify-center">
-        <div className="w-full md:max-w-70 flex flex-col gap-2 text-indigo-50">
+        <div className="w-full md:max-w-[70%] flex flex-col gap-2 text-indigo-50">
           <h2 className="text-3xl font-semibold">Criar Conta</h2>
           <span>
             Já tem uma conta?{" "}
@@ -57,7 +57,8 @@ export default function RegisterForm() {
             onSubmit={handleSubmit(handleRegisterUser)}
             className="flex flex-col gap-4"
           >
-            <fieldset className="flex flex-col gap-4">
+            <div className="hidden md:flex justify-between">
+              <fieldset className="w-[47%] flex flex-col gap-4">
               {errors.name ? (
                 <span className="text-xs text-center">
                   {errors.name.message}
@@ -74,7 +75,42 @@ export default function RegisterForm() {
               />
             </fieldset>
 
-            <fieldset className="flex flex-col gap-4">
+            <fieldset className="w-[47%] flex flex-col gap-4">
+              {errors.lastName ? (
+                <span className="text-xs text-center">
+                  {errors.lastName.message}
+                </span>
+              ) : (
+                <span className="h-4"></span>
+              )}
+
+              <input
+                type="text"
+                placeholder="Sobrenome"
+                {...register("lastName")}
+                className="w-full p-2 pl-4 bg-zinc-600 rounded-lg"
+              />
+            </fieldset>
+            </div>
+
+            <fieldset className="flex md:hidden flex-col gap-4">
+              {errors.name ? (
+                <span className="text-xs text-center">
+                  {errors.name.message}
+                </span>
+              ) : (
+                <span className="h-4"></span>
+              )}
+
+              <input
+                type="text"
+                placeholder="Nome"
+                {...register("name")}
+                className="w-full p-2 pl-4 bg-zinc-600 rounded-lg"
+              />
+            </fieldset>
+
+            <fieldset className="flex md:hidden flex-col gap-4">
               {errors.lastName ? (
                 <span className="text-xs text-center">
                   {errors.lastName.message}
